@@ -11,6 +11,7 @@ import ScrollPage from '../views/ScrollPage'
 import DragMove from '../views/DragMove'
 import MouseMove from '../views/MouseMove'
 import PdfPage from '../views/PdfPage'
+import AdminAdress from '../views/AdminAdress'
 Vue.use(Router)
 export default new Router({
   routes: [{
@@ -122,6 +123,18 @@ export default new Router({
         path: '/pdf',
         component: PdfPage,
         name: 'PDF'
+      }]
+    },
+    {
+      path: '/',
+      component: HomePage,
+      name: '',
+      iconCls: 'fa fa-address-card',
+      hidden: true,
+      children: [{
+        path: '/admin',
+        component: AdminAdress,
+        name: '后台demo地址'
       }]
     }
   ]
